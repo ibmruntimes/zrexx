@@ -1,0 +1,27 @@
+{
+  "name": "zrexx",
+  "version": "1.0.0",
+  "description": "Call ZOS REXX scripts from node-js",
+  "main": "index.js",
+  "gypfile": true,
+  "scripts": {
+    "build": "node-gyp rebuild",
+    "clean": "node-gyp clean"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.ibm.com:open-z/zrexx.git"
+  },
+  "keywords": [
+    "ZOS",
+    "REXX"
+  ],
+  "author": "ccw",
+  "license": "ISC",
+  "devDependencies": {
+    "node-gyp": "^3.8.0"
+  },
+  "dependencies": {
+    "node-addon-api": "^1.6.3"
+  }
+}
