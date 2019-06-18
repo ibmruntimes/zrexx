@@ -1,4 +1,4 @@
-const zrexx = require('../');
+const zrexx = require('zrexx');
 
 id=require("os").userInfo().username
 dsn=id+".REXX.TESTPDS"
