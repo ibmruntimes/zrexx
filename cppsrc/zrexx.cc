@@ -1,3 +1,8 @@
+/*
+ * Licensed Materials - Property of IBM
+ * (C) Copyright IBM Corp. 2019. All Rights Reserved.
+ * US Government Users Restricted Rights - Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+ */
 #include "zrexx.h"
 
 // (1) the Async Error class
