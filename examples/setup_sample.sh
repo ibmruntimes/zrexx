@@ -30,6 +30,6 @@ Do i=1 TO n
 End
 return n*10;
 END
-/bin/cp $$.tmp "//'${dsn}(HELLO)'"
+/bin/cp -O u $$.tmp "//'${dsn}(HELLO)'"
 unlink $$.tmp
 

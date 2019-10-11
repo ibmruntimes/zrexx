@@ -1,12 +1,13 @@
 {
   "name": "zrexx",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Call ZOS REXX scripts from node-js",
   "main": "index.js",
   "gypfile": true,
   "scripts": {
     "build": "node-gyp rebuild",
-    "clean": "node-gyp clean"
+    "clean": "node-gyp clean",
+    "test": "./node_modules/.bin/mocha -b -t 40000 --reporter spec"
   },
   "repository": {
     "type": "git",
@@ -14,7 +15,8 @@
   },
   "keywords": [
     "ZOS",
-    "REXX"
+    "REXX",
+    "PDS"
   ],
   "author": "ccw",
   "license": "ISC",
@@ -22,6 +24,8 @@
     "node-gyp": "^3.8.0"
   },
   "dependencies": {
-    "node-addon-api": "^1.6.3"
+    "chai": "^4.2.0",
+    "mocha": "^6.2.1",
+    "node-addon-api": "^1.7.1"
   }
 }

@@ -115,10 +115,10 @@ void ZrexxAsyncCallback(const Napi::CallbackInfo &info) {
   }
   int fd = info[0].As<Napi::Number>();
 
-  const char *dsname =
-      static_cast<std::string>(info[1].As<Napi::String>()).c_str();
-  const char *member =
-      static_cast<std::string>(info[2].As<Napi::String>()).c_str();
+  char dsname[55];
+  char member[9];
+  strncpy(dsname, static_cast<std::string>(info[1].As<Napi::String>()).c_str(), sizeof(dsname));
+  strncpy(member, static_cast<std::string>(info[2].As<Napi::String>()).c_str(), sizeof(member));
 
   if (argc > 0) {
     int i;
@@ -150,10 +150,11 @@ Napi::Number ZrexxWrapped(const Napi::CallbackInfo &info) {
     return Napi::Number::New(env, -1);
   }
   int fd = info[0].As<Napi::Number>();
-  const char *dsname =
-      static_cast<std::string>(info[1].As<Napi::String>()).c_str();
-  const char *member =
-      static_cast<std::string>(info[2].As<Napi::String>()).c_str();
+
+  char dsname[55];
+  char member[9];
+  strncpy(dsname, static_cast<std::string>(info[1].As<Napi::String>()).c_str(), sizeof(dsname));
+  strncpy(member, static_cast<std::string>(info[2].As<Napi::String>()).c_str(), sizeof(member));
 
   int argc = info.Length() - 3;
   char **argv = 0;
