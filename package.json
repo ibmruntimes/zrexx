@@ -1,7 +1,7 @@
 {
   "name": "zrexx",
-  "version": "1.0.4",
-  "description": "Call ZOS REXX scripts from node-js",
+  "version": "1.0.5",
+  "description": "Call z/OS REXX scripts from node-js",
   "main": "index.js",
   "gypfile": true,
   "scripts": {
@@ -15,6 +15,7 @@
   },
   "keywords": [
     "ZOS",
+    "z/OS",
     "REXX",
     "PDS"
   ],

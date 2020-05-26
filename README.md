@@ -1,5 +1,5 @@
 # zrexx
-Call ZOS REXX scripts reside in PDS from node-js with IRXEXEC
+Call z/OS REXX scripts reside in PDS from node-js with IRXEXEC
 
 ## Installation
 
