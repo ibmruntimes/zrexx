@@ -102,6 +102,7 @@ static int alloc_sysexec(const char *dsname, int verbose) {
   return rc;
 }
 
+
 // (7) Allocated DDNAME SYSTSIN to DUMMY
 static int alloc_systsin(int verbose) {
   __dyn_t ip;
@@ -328,6 +329,7 @@ static int callrexx_i(int output_fd, const char *dsn, const char *mem, int argc,
   wa->flags = 0x50000000;
   wa->instblk_ptr = 0;
   wa->res_parm5 = 0;
+  wa->fd = output_fd;
   wa->evalblk_ptr = evalblock(&(wa->eval_blk));
   wa->reserved_workarea_ptr = 0;
   wa->reserved_userfield_ptr = 0;
