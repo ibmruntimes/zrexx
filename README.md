@@ -1,5 +1,5 @@
 # zrexx
-Call z/OS REXX scripts reside in PDS from node-js with IRXEXEC
+Call z/OS REXX scripts that reside in a PDS from node-js with IRXEXEC
 
 ## Installation
 
@@ -47,17 +47,16 @@ There are two versions of rexx calls
 ```js
 const zrexx = require('zrexx');
 
-id=require("os").userInfo().username
-dsn=id+".REXX.TESTPDS"
-
+id = require("os").userInfo().username
+dsn = id + ".REXX.TESTPDS"
 
 console.log(zrexx.execute(2,dsn,"HELLO","3","second_rexx_arg","third_rexx_arg"));
 
 zrexx.execute_async(2,dsn,"HELLO","12","second_rexx_arg","third_rexx_arg","fourth_rexx_arg","fifth_rexx_arg",function(err,rc) {
-    console.log("async call back");
-    console.log("error",err);
-    console.log("Rexx call RC",rc);
-    } );
+  console.log("async call back");
+  console.log("error",err);
+  console.log("Rexx call RC",rc);
+} );
 
 ```
 
