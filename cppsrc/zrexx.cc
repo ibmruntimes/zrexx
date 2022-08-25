@@ -163,8 +163,8 @@ Napi::Number ZrexxWrapped(const Napi::CallbackInfo &info) {
     int i;
     argv = (char **)alloca(8 * (argc + 1));
     for (i = 0; i < argc; ++i) {
-      char *t = (char *)static_cast<std::string>(info[3 + i].As<Napi::String>())
-                    .c_str();
+      std::string str = static_cast<std::string>(info[3 + i].As<Napi::String>());
+      const char *t = str.c_str();
       // this pointer value does not change, we have to allocate storage for it.
       int len = strlen(t);
       argv[i] = (char *)alloca(len + 1);
