@@ -1,6 +1,6 @@
 /*
  * Licensed Materials - Property of IBM
- * (C) Copyright IBM Corp. 2019. All Rights Reserved.
+ * (C) Copyright IBM Corp. 2022. All Rights Reserved.
  * US Government Users Restricted Rights - Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
  */
 #if defined(__MVS__)
@@ -315,7 +315,7 @@ public:
 // (17) internal function to actually run IRXEXEC
 static int callrexx_i(int output_fd, const char *dsn, const char *mem, int argc,
                       char **argv) {
-  int i, rc;
+  int rc;
   rexx_dd dd_allocation(dsn);
 
   if (dd_allocation.inerror())
