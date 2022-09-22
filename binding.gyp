@@ -1,4 +1,7 @@
 {
+    "variables": {
+        "NODE_VERSION%":"<!(node -p \"process.versions.node.split(\\\".\\\")[0]\")"
+    },
     "targets": [{
         "target_name": "zrexx",
         "include_dirs": [
@@ -10,6 +13,9 @@
                "cppsrc/zrexx.cc",
                "cppsrc/zrex_impl.cc"
             ],
+          }],
+          [ "NODE_VERSION < 16", {
+            "cflags": [  "-qascii" ],
           }],
         ],
 
