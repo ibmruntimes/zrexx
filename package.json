@@ -1,6 +1,6 @@
 {
   "name": "zrexx",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Call z/OS PDS REXX scripts from node-js",
   "main": "index.js",
   "gypfile": true,

@@ -1,6 +1,6 @@
 /*
  * Licensed Materials - Property of IBM
- * (C) Copyright IBM Corp. 2019. All Rights Reserved.
+ * (C) Copyright IBM Corp. 2022. All Rights Reserved.
  * US Government Users Restricted Rights - Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
  */
 #include "zrexx.h"
@@ -163,8 +163,8 @@ Napi::Number ZrexxWrapped(const Napi::CallbackInfo &info) {
     int i;
     argv = (char **)alloca(8 * (argc + 1));
     for (i = 0; i < argc; ++i) {
-      char *t = (char *)static_cast<std::string>(info[3 + i].As<Napi::String>())
-                    .c_str();
+      std::string str = static_cast<std::string>(info[3 + i].As<Napi::String>());
+      const char *t = str.c_str();
       // this pointer value does not change, we have to allocate storage for it.
       int len = strlen(t);
       argv[i] = (char *)alloca(len + 1);
