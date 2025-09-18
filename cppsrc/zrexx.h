@@ -10,7 +10,15 @@
 extern int execute(int fd, const char *, const char *, int, char **);
 
 #if !defined(__MVS__)
-#error This addon is for zos only
+#error This addon is for z/OS only
 #endif
+
+// XL-specific NR parameter constraint:
+// https://www.ibm.com/docs/en/zos/3.1.0?topic=statements-inline-assembly-extension
+#if __clang_major__ < 18
+#define ZREXX_NR(attr,reg) attr "NR:" #reg
+#else
+#define ZREXX_NR(attr,reg) attr "{" #reg "}"
+#endif 
 
 #endif

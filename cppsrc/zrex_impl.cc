@@ -16,7 +16,7 @@
 #include <unistd.h>
 
 #if ' ' == 0x40
-#error Not compiled with -qascii
+#error Not compiled with -fzos-le-char-mode=ascii
 #endif
 
 // (1) The EXECBLK structure layout
@@ -219,8 +219,8 @@ static int svc6(void *reg15, void *reg1, void *dsa) {
   __asm(" sam31 \n"
         " svc 6\n"
         " sam64 \n"
-        : "+NR:r15"(reg15)
-        : "NR:r1"(reg1), "NR:r13"(dsa), "NR:r0"(0)
+        : ZREXX_NR("+",r15)(reg15)
+        : ZREXX_NR("",r1)(reg1), ZREXX_NR("",r13)(dsa), ZREXX_NR("",r0)(0)
         :);
   return (int)(long)reg15;
 }
