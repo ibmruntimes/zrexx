@@ -1,5 +1,5 @@
 # zrexx
-Call z/OS REXX scripts that reside in a PDS from node-js with IRXEXEC
+Call z/OS REXX scripts that reside in a PDS from Node.js with IRXEXEC
 
 ## Installation
 
@@ -9,7 +9,7 @@ This is a [Node.js](https://nodejs.org/en/) module available through the
 -->
 
 Before installing, [download and install IBM Open Enterprise SDK for Node.js](https://www.ibm.com/docs/en/sdk-nodejs-zos)
-16 or higher. zrexx v1.0.8 or higher is required for Node.js 18 or higher.
+20 or higher. zrexx v1.0.8 or higher is required for Node.js 20 or higher.
 
 ## Simple to use
 
